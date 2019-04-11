@@ -10,6 +10,7 @@ class EatWell extends Component {
                 <p className="bold-text">Eat Well</p>
                 <p className="content-text">A balanced diet rich in nutrients is good for both your mental and
                     physical health</p>
+                <button onClick={this.props.onEatWellNext}>Next</button>
             </div>
         )
     }
