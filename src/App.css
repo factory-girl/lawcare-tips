@@ -13,7 +13,12 @@
 
 .content-text {
   font-size: 3em;
-  margin: 0 10em 0 10em;
+  margin: 0 7em 0 7em;
+}
+
+.main-image {
+  height: 20em;
+  margin-top: 3em;
 }
 
 .App-header {
