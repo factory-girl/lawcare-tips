@@ -4,6 +4,12 @@ import KeepActive from './KeepActive';
 import TakeABreak from './TakeABreak';
 import SleepIsImportant from './SleepIsImportant';
 import ShareHowYouFeel from './ShareHowYouFeel';
+import EatWell from './EatWell';
+import DrinkInModeration from './DrinkInModeration';
+import KeepInTouch from './KeepInTouch';
+import GiveBack from './GiveBack';
+import BeMindful from './BeMindful';
+import AskForHelp from './AskForHelp';
 
 class Container extends React.Component {
     constructor(props) {
@@ -15,7 +21,13 @@ class Container extends React.Component {
         this.onIntroNext = this.onIntroNext.bind(this);
         this.onKeepActiveNext = this.onKeepActiveNext.bind(this);
         this.onTakeABreakNext = this.onTakeABreakNext.bind(this);
-        this.onSleepIsImportantNext = this.onSleepIsImportantNext.bind(this)
+        this.onSleepIsImportantNext = this.onSleepIsImportantNext.bind(this);
+        this.onShareHowYouFeelNext = this.onShareHowYouFeelNext.bind(this);
+        this.onEatWellNext = this.onEatWellNext.bind(this);
+        this.onDrinkInModerationNext = this.onDrinkInModerationNext.bind(this);
+        this.onKeepInTouchNext = this.onKeepInTouchNext.bind(this);
+        this.onGiveBackNext = this.onGiveBackNext.bind(this);
+        this.onBeMindfulNext = this.onBeMindfulNext.bind(this);
     }
 
     onIntroNext() {
@@ -42,6 +54,42 @@ class Container extends React.Component {
         })
     }
 
+    onShareHowYouFeelNext() {
+        this.setState({
+            currentSlide: 5
+        })
+    }
+
+    onEatWellNext() {
+        this.setState({
+            currentSlide: 6
+        })
+    }
+
+    onDrinkInModerationNext() {
+        this.setState({
+            currentSlide: 7
+        })
+    }
+
+    onKeepInTouchNext() {
+        this.setState({
+            currentSlide: 8
+        })
+    }
+
+    onGiveBackNext() {
+        this.setState({
+            currentSlide: 9
+        })
+    }
+
+    onBeMindfulNext() {
+        this.setState({
+            currentSlide: 10
+        })
+    }
+
     render() {
         return (
             <div className="main-container">
@@ -63,7 +111,31 @@ class Container extends React.Component {
                 }
                 {
                     this.state.currentSlide === 4 &&
-                    <ShareHowYouFeel />
+                    <ShareHowYouFeel onShareHowYouFeelNext={this.onShareHowYouFeelNext} />
+                }
+                {
+                    this.state.currentSlide === 5 &&
+                    <EatWell onEatWellNext={this.onEatWellNext}/>
+                }
+                {
+                    this.state.currentSlide === 6 &&
+                    <DrinkInModeration onDrinkInModerationNext={this.onDrinkInModerationNext}/>
+                }
+                {
+                    this.state.currentSlide === 7 &&
+                    <KeepInTouch onKeepInTouchNext={this.onKeepInTouchNext}/>
+                }
+                {
+                    this.state.currentSlide === 8 &&
+                    <GiveBack onGiveBackNext={this.onGiveBackNext}/>
+                }
+                {
+                    this.state.currentSlide === 9 &&
+                    <BeMindful onBeMindfulNext={this.onBeMindfulNext}/>
+                }
+                {
+                    this.state.currentSlide === 10 &&
+                    <AskForHelp />
                 }
             </div>
         )
