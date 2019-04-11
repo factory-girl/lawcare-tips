@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-import takeABreak from '../images/take-a-break.jpg'
+import sleepIsImportant from "../images/sleep-is-important.jpg";
 
 class SleepIsImportant extends Component {
     render() {
         return (
             <div className="sleep-is-important-container">
-
+                <img src={sleepIsImportant}
+                     className="main-image"/>
+                <p className="bold-text">Sleep is Important</p>
+                <p className="content-text">Sleeping well can improve concentration and refresh you</p>
+                <button onClick={this.props.onSleepIsImportantNext}>Next</button>
             </div>
         )
     }
