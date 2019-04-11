@@ -1,6 +1,7 @@
 import React from 'react';
 import Intro from './Intro';
 import KeepActive from './KeepActive'
+import TakeABreak from './TakeABreak'
 
 class Container extends React.Component {
     constructor(props) {
@@ -10,11 +11,17 @@ class Container extends React.Component {
         };
 
         this.onIntroNext = this.onIntroNext.bind(this);
+        this.onKeepActiveNext = this.onKeepActiveNext.bind(this);
     }
 
     onIntroNext() {
         this.setState({
             currentSlide: 1
+        })
+    }
+    onKeepActiveNext() {
+        this.setState({
+            currentSlide: 2
         })
     }
 
@@ -27,7 +34,11 @@ class Container extends React.Component {
                 }
                 {
                     this.state.currentSlide === 1 &&
-                    <KeepActive />
+                    <KeepActive onKeepActiveNext={this.onKeepActiveNext}/>
+                }
+                {
+                    this.state.currentSlide === 2 &&
+                    <TakeABreak />
                 }
             </div>
         )
