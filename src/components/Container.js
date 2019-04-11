@@ -1,7 +1,8 @@
 import React from 'react';
 import Intro from './Intro';
-import KeepActive from './KeepActive'
-import TakeABreak from './TakeABreak'
+import KeepActive from './KeepActive';
+import TakeABreak from './TakeABreak';
+import SleepIsImportant from './SleepIsImportant'
 
 class Container extends React.Component {
     constructor(props) {
@@ -12,6 +13,7 @@ class Container extends React.Component {
 
         this.onIntroNext = this.onIntroNext.bind(this);
         this.onKeepActiveNext = this.onKeepActiveNext.bind(this);
+        this.onTakeABreakNext = this.onTakeABreakNext.bind(this)
     }
 
     onIntroNext() {
@@ -19,9 +21,16 @@ class Container extends React.Component {
             currentSlide: 1
         })
     }
+
     onKeepActiveNext() {
         this.setState({
             currentSlide: 2
+        })
+    }
+
+    onTakeABreakNext() {
+        this.setState({
+            currentSlide: 3
         })
     }
 
@@ -38,7 +47,11 @@ class Container extends React.Component {
                 }
                 {
                     this.state.currentSlide === 2 &&
-                    <TakeABreak />
+                    <TakeABreak onTakeABreakNext={this.onTakeABreakNext} />
+                }
+                {
+                    this.state.currentSlide === 3 &&
+                    <SleepIsImportant />
                 }
             </div>
         )

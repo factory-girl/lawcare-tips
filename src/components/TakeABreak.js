@@ -10,6 +10,7 @@ class TakeABreak extends Component {
                 <p className="bold-text">Take a Break</p>
                 <p className="content-text">Use your lunchbreak to get away from your desk. Step outside for just a few
                     minutes, it can re-energise you</p>
+                <button onClick={this.props.onTakeABreakNext}>Next</button>
             </div>
         )
     }
