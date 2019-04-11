@@ -9,9 +9,10 @@ class Contact extends Component {
                      className="main-image"/>
                 <p className="content-text">Call our free, independent, confidential Helpline on
                     <span className="red-text"> 0800 279 6888</span></p>
+                <button className="previous-button">&#8249;</button>
                 <button onClick={this.props.onContactNext}
                         className="next-button">&#8250;</button>
-            </div>
+                </div>
         )
     }
 }

@@ -10,6 +10,7 @@ class KeepInTouch extends Component {
                 <p className="bold-text">Keep in Touch</p>
                 <p className="content-text">Maintain good relationships with friends, family and your wider
                     community: strong connections can help you to feel happier</p>
+                <button className="previous-button">&#8249;</button>
                 <button onClick={this.props.onKeepInTouchNext}
                         className="next-button">&#8250;</button>
             </div>

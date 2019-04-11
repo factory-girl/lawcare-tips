@@ -9,6 +9,7 @@ class Intro extends Component {
                     className="logo"/>
                 <p className="bold-text">Look After Yourself</p>
                 <p className="content-text">Top 10 Tips for Good Mental Health and Wellbeing</p>
+                <button className="previous-button">&#8249;</button>
                 <button onClick={this.props.onIntroNext}
                         className="next-button">&#8250;</button>
             </div>

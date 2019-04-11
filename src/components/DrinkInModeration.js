@@ -10,6 +10,7 @@ class DrinkInModeration extends Component {
                 <p className="bold-text">Drink In Moderation</p>
                 <p className="content-text">Stay within the recommended alcohol limits: heavy drinking affects
                     brain function and can cause disease</p>
+                <button className="previous-button">&#8249;</button>
                 <button onClick={this.props.onDrinkInModerationNext}
                         className="next-button">&#8250;</button>
             </div>
