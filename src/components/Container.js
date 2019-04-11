@@ -9,6 +9,7 @@ import DrinkInModeration from './DrinkInModeration';
 import KeepInTouch from './KeepInTouch';
 import GiveBack from './GiveBack';
 import BeMindful from './BeMindful';
+import AskForHelp from './AskForHelp';
 
 class Container extends React.Component {
     constructor(props) {
@@ -26,6 +27,7 @@ class Container extends React.Component {
         this.onDrinkInModerationNext = this.onDrinkInModerationNext.bind(this);
         this.onKeepInTouchNext = this.onKeepInTouchNext.bind(this);
         this.onGiveBackNext = this.onGiveBackNext.bind(this);
+        this.onBeMindfulNext = this.onBeMindfulNext.bind(this);
     }
 
     onIntroNext() {
@@ -82,6 +84,12 @@ class Container extends React.Component {
         })
     }
 
+    onBeMindfulNext() {
+        this.setState({
+            currentSlide: 10
+        })
+    }
+
     render() {
         return (
             <div className="main-container">
@@ -123,7 +131,11 @@ class Container extends React.Component {
                 }
                 {
                     this.state.currentSlide === 9 &&
-                    <BeMindful />
+                    <BeMindful onBeMindfulNext={this.onBeMindfulNext}/>
+                }
+                {
+                    this.state.currentSlide === 10 &&
+                    <AskForHelp />
                 }
             </div>
         )
