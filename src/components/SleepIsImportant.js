@@ -9,7 +9,8 @@ class SleepIsImportant extends Component {
                      className="main-image"/>
                 <p className="bold-text">Sleep is Important</p>
                 <p className="content-text">Sleeping well can improve concentration and refresh you</p>
-                <button onClick={this.props.onSleepIsImportantNext}>Next</button>
+                <button onClick={this.props.onSleepIsImportantNext}
+                        className="next-button">&#8250;</button>
             </div>
         )
     }

@@ -10,7 +10,8 @@ class BeMindful extends Component {
                 <p className="bold-text">Be Mindful</p>
                 <p className="content-text">Mindfulness - positive emotions and paying attention to the present -
                     can help you enjoy life more</p>
-                <button onClick={this.props.onBeMindfulNext}>Next</button>
+                <button onClick={this.props.onBeMindfulNext}
+                        className="next-button">&#8250;</button>
             </div>
         )
     }

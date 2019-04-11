@@ -10,7 +10,8 @@ class GiveBack extends Component {
                 <p className="bold-text">Give Back</p>
                 <p className="content-text">It has been proven that giving - time or money - can make you feel valued
                     and give you a sense of purpose</p>
-                <button onClick={this.props.onGiveBackNext}>Next</button>
+                <button onClick={this.props.onGiveBackNext}
+                        className="next-button">&#8250;</button>
             </div>
         )
     }

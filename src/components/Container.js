@@ -10,6 +10,7 @@ import KeepInTouch from './KeepInTouch';
 import GiveBack from './GiveBack';
 import BeMindful from './BeMindful';
 import AskForHelp from './AskForHelp';
+import Contact from './Contact'
 
 class Container extends React.Component {
     constructor(props) {
@@ -28,6 +29,8 @@ class Container extends React.Component {
         this.onKeepInTouchNext = this.onKeepInTouchNext.bind(this);
         this.onGiveBackNext = this.onGiveBackNext.bind(this);
         this.onBeMindfulNext = this.onBeMindfulNext.bind(this);
+        this.onAskForHelpNext = this.onAskForHelpNext.bind(this);
+        this.onContactNext = this.onContactNext.bind(this);
     }
 
     onIntroNext() {
@@ -90,6 +93,18 @@ class Container extends React.Component {
         })
     }
 
+    onAskForHelpNext() {
+        this.setState({
+            currentSlide: 11
+        })
+    }
+
+    onContactNext() {
+        this.setState({
+            currentSlide: 0
+        })
+    }
+
     render() {
         return (
             <div className="main-container">
@@ -135,7 +150,11 @@ class Container extends React.Component {
                 }
                 {
                     this.state.currentSlide === 10 &&
-                    <AskForHelp />
+                    <AskForHelp onAskForHelpNext={this.onAskForHelpNext}/>
+                }
+                {
+                    this.state.currentSlide === 11 &&
+                    <Contact onContactNext={this.onContactNext}/>
                 }
             </div>
         )
