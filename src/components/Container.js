@@ -2,7 +2,8 @@ import React from 'react';
 import Intro from './Intro';
 import KeepActive from './KeepActive';
 import TakeABreak from './TakeABreak';
-import SleepIsImportant from './SleepIsImportant'
+import SleepIsImportant from './SleepIsImportant';
+import ShareHowYouFeel from './ShareHowYouFeel';
 
 class Container extends React.Component {
     constructor(props) {
@@ -13,7 +14,8 @@ class Container extends React.Component {
 
         this.onIntroNext = this.onIntroNext.bind(this);
         this.onKeepActiveNext = this.onKeepActiveNext.bind(this);
-        this.onTakeABreakNext = this.onTakeABreakNext.bind(this)
+        this.onTakeABreakNext = this.onTakeABreakNext.bind(this);
+        this.onSleepIsImportantNext = this.onSleepIsImportantNext.bind(this)
     }
 
     onIntroNext() {
@@ -34,6 +36,12 @@ class Container extends React.Component {
         })
     }
 
+    onSleepIsImportantNext() {
+        this.setState({
+            currentSlide: 4
+        })
+    }
+
     render() {
         return (
             <div className="main-container">
@@ -51,7 +59,11 @@ class Container extends React.Component {
                 }
                 {
                     this.state.currentSlide === 3 &&
-                    <SleepIsImportant />
+                    <SleepIsImportant onSleepIsImportantNext={this.onSleepIsImportantNext} />
+                }
+                {
+                    this.state.currentSlide === 4 &&
+                    <ShareHowYouFeel />
                 }
             </div>
         )
