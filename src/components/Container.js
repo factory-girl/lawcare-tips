@@ -7,6 +7,7 @@ import ShareHowYouFeel from './ShareHowYouFeel';
 import EatWell from './EatWell';
 import DrinkInModeration from './DrinkInModeration';
 import KeepInTouch from './KeepInTouch';
+import GiveBack from './GiveBack';
 
 class Container extends React.Component {
     constructor(props) {
@@ -22,6 +23,7 @@ class Container extends React.Component {
         this.onShareHowYouFeelNext = this.onShareHowYouFeelNext.bind(this);
         this.onEatWellNext = this.onEatWellNext.bind(this);
         this.onDrinkInModerationNext = this.onDrinkInModerationNext.bind(this);
+        this.onKeepInTouchNext = this.onKeepInTouchNext.bind(this);
     }
 
     onIntroNext() {
@@ -66,6 +68,12 @@ class Container extends React.Component {
         })
     }
 
+    onKeepInTouchNext() {
+        this.setState({
+            currentSlide: 8
+        })
+    }
+
     render() {
         return (
             <div className="main-container">
@@ -99,7 +107,11 @@ class Container extends React.Component {
                 }
                 {
                     this.state.currentSlide === 7 &&
-                    <KeepInTouch />
+                    <KeepInTouch onKeepInTouchNext={this.onKeepInTouchNext}/>
+                }
+                {
+                    this.state.currentSlide === 8 &&
+                    <GiveBack />
                 }
             </div>
         )
