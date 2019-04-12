@@ -10,7 +10,8 @@ class ShareHowYouFeel extends Component {
                 <p className="bold-text">Share How You Feel</p>
                 <p className="content-text">Talk about your feelings, it can help you cope with problems and feel
                     listened to</p>
-                <button className="previous-button">&#8249;</button>
+                <button className="previous-button"
+                        onClick={this.props.onShareHowYouFeelPrev}>&#8249;</button>
                 <button onClick={this.props.onShareHowYouFeelNext}
                         className="next-button">&#8250;</button>
             </div>
