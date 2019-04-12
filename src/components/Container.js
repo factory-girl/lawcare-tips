@@ -41,6 +41,7 @@ class Container extends React.Component {
         this.onDrinkInModerationPrev = this.onDrinkInModerationPrev.bind(this);
         this.onKeepInTouchPrev = this.onKeepInTouchPrev.bind(this);
         this.onGiveBackPrev = this.onGiveBackPrev.bind(this);
+        this.onBeMindfulPrev = this.onBeMindfulPrev.bind(this);
     }
 
     onIntroNext() {
@@ -157,6 +158,12 @@ class Container extends React.Component {
         })
     }
 
+    onBeMindfulPrev() {
+        this.setState({
+            currentSlide: 8
+        })
+    }
+
     onAskForHelpNext() {
         this.setState({
             currentSlide: 11
@@ -219,7 +226,8 @@ class Container extends React.Component {
                 }
                 {
                     this.state.currentSlide === 9 &&
-                    <BeMindful onBeMindfulNext={this.onBeMindfulNext}/>
+                    <BeMindful onBeMindfulNext={this.onBeMindfulNext}
+                               onBeMindfulPrev={this.onBeMindfulPrev}/>
                 }
                 {
                     this.state.currentSlide === 10 &&
