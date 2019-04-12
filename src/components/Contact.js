@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import lawcarePhone from "../images/lawcare-phone.jpg";
+import phone from "../images/phone-photo.png";
 
 class Contact extends Component {
     render() {
         return (
             <div className="contact-container">
-                <img src={lawcarePhone}
+                <img src={phone}
                      className="main-image"/>
                 <p className="content-text">Call our free, independent, confidential Helpline on
                     <span className="red-text"> 0800 279 6888</span></p>
