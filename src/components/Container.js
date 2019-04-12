@@ -10,6 +10,7 @@ import KeepInTouch from './KeepInTouch';
 import GiveBack from './GiveBack';
 import BeMindful from './BeMindful';
 import AskForHelp from './AskForHelp';
+import Contact from './Contact'
 
 class Container extends React.Component {
     constructor(props) {
@@ -28,11 +29,28 @@ class Container extends React.Component {
         this.onKeepInTouchNext = this.onKeepInTouchNext.bind(this);
         this.onGiveBackNext = this.onGiveBackNext.bind(this);
         this.onBeMindfulNext = this.onBeMindfulNext.bind(this);
+        this.onAskForHelpNext = this.onAskForHelpNext.bind(this);
+        this.onContactNext = this.onContactNext.bind(this);
+
+        this.onIntroPrev = this.onIntroPrev.bind(this);
+        this.onKeepActivePrev = this.onKeepActivePrev.bind(this);
+        this.onTakeABreakPrev = this.onTakeABreakPrev.bind(this);
+        this.onSleepIsImportantPrev = this.onSleepIsImportantPrev.bind(this);
+        this.onShareHowYouFeelPrev = this.onShareHowYouFeelPrev.bind(this);
+        this.onEatWellPrev = this.onEatWellPrev.bind(this);
+        this.onDrinkInModerationPrev = this.onDrinkInModerationPrev.bind(this);
+        this.onKeepInTouchPrev = this.onKeepInTouchPrev.bind(this);
     }
 
     onIntroNext() {
         this.setState({
             currentSlide: 1
+        })
+    }
+
+    onIntroPrev() {
+        this.setState({
+            currentSlide: 11
         })
     }
 
@@ -42,9 +60,21 @@ class Container extends React.Component {
         })
     }
 
+    onKeepActivePrev() {
+        this.setState({
+            currentSlide: 0
+        })
+    }
+
     onTakeABreakNext() {
         this.setState({
             currentSlide: 3
+        })
+    }
+
+    onTakeABreakPrev() {
+        this.setState({
+            currentSlide: 1
         })
     }
 
@@ -54,9 +84,21 @@ class Container extends React.Component {
         })
     }
 
+    onSleepIsImportantPrev() {
+        this.setState({
+            currentSlide: 2
+        })
+    }
+
     onShareHowYouFeelNext() {
         this.setState({
             currentSlide: 5
+        })
+    }
+
+    onShareHowYouFeelPrev() {
+        this.setState({
+            currentSlide: 3
         })
     }
 
@@ -66,15 +108,33 @@ class Container extends React.Component {
         })
     }
 
+    onEatWellPrev() {
+        this.setState({
+            currentSlide: 4
+        })
+    }
+
     onDrinkInModerationNext() {
         this.setState({
             currentSlide: 7
         })
     }
 
+    onDrinkInModerationPrev() {
+        this.setState({
+            currentSlide: 5
+        })
+    }
+
     onKeepInTouchNext() {
         this.setState({
             currentSlide: 8
+        })
+    }
+
+    onKeepInTouchPrev() {
+        this.setState({
+            currentSlide: 6
         })
     }
 
@@ -90,40 +150,60 @@ class Container extends React.Component {
         })
     }
 
+    onAskForHelpNext() {
+        this.setState({
+            currentSlide: 11
+        })
+    }
+
+    onContactNext() {
+        this.setState({
+            currentSlide: 0
+        })
+    }
+
     render() {
         return (
             <div className="main-container">
                 {
                     this.state.currentSlide === 0 &&
-                    <Intro onIntroNext={this.onIntroNext}/>
+                    <Intro onIntroNext={this.onIntroNext}
+                           onIntroPrev={this.onIntroPrev}/>
                 }
                 {
                     this.state.currentSlide === 1 &&
-                    <KeepActive onKeepActiveNext={this.onKeepActiveNext}/>
+                    <KeepActive onKeepActiveNext={this.onKeepActiveNext}
+                                onKeepActivePrev={this.onKeepActivePrev}/>
                 }
                 {
                     this.state.currentSlide === 2 &&
-                    <TakeABreak onTakeABreakNext={this.onTakeABreakNext} />
+                    <TakeABreak onTakeABreakNext={this.onTakeABreakNext}
+                                onTakeABreakPrev={this.onTakeABreakPrev}/>
                 }
                 {
                     this.state.currentSlide === 3 &&
-                    <SleepIsImportant onSleepIsImportantNext={this.onSleepIsImportantNext} />
+                    <SleepIsImportant onSleepIsImportantNext={this.onSleepIsImportantNext}
+                                      onSleepIsImportantPrev={this.onSleepIsImportantPrev}/>
                 }
                 {
                     this.state.currentSlide === 4 &&
-                    <ShareHowYouFeel onShareHowYouFeelNext={this.onShareHowYouFeelNext} />
+                    <ShareHowYouFeel onShareHowYouFeelNext={this.onShareHowYouFeelNext}
+                                     onShareHowYouFeelPrev={this.onShareHowYouFeelPrev}/>
                 }
                 {
                     this.state.currentSlide === 5 &&
-                    <EatWell onEatWellNext={this.onEatWellNext}/>
+                    <EatWell onEatWellNext={this.onEatWellNext}
+                             onEatWellPrev={this.onEatWellPrev}/>
                 }
                 {
                     this.state.currentSlide === 6 &&
-                    <DrinkInModeration onDrinkInModerationNext={this.onDrinkInModerationNext}/>
+                    <DrinkInModeration onDrinkInModerationNext={this.onDrinkInModerationNext}
+                                       onDrinkInModerationPrev={this.onDrinkInModerationPrev}/>
                 }
                 {
                     this.state.currentSlide === 7 &&
-                    <KeepInTouch onKeepInTouchNext={this.onKeepInTouchNext}/>
+                    <KeepInTouch onKeepInTouchNext={this.onKeepInTouchNext}
+                                 onKeepInTouchPrev={this.onKeepInTouchPrev}/>
                 }
                 {
                     this.state.currentSlide === 8 &&
@@ -135,7 +215,11 @@ class Container extends React.Component {
                 }
                 {
                     this.state.currentSlide === 10 &&
-                    <AskForHelp />
+                    <AskForHelp onAskForHelpNext={this.onAskForHelpNext}/>
+                }
+                {
+                    this.state.currentSlide === 11 &&
+                    <Contact onContactNext={this.onContactNext}/>
                 }
             </div>
         )
