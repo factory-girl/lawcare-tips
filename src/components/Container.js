@@ -31,6 +31,9 @@ class Container extends React.Component {
         this.onBeMindfulNext = this.onBeMindfulNext.bind(this);
         this.onAskForHelpNext = this.onAskForHelpNext.bind(this);
         this.onContactNext = this.onContactNext.bind(this);
+
+        this.onIntroPrev = this.onIntroPrev.bind(this);
+        this.onKeepActivePrev = this.onKeepActivePrev.bind(this);
     }
 
     onIntroNext() {
@@ -39,9 +42,22 @@ class Container extends React.Component {
         })
     }
 
+    onIntroPrev() {
+        this.setState({
+            currentSlide: 11
+        })
+    }
+
+
     onKeepActiveNext() {
         this.setState({
             currentSlide: 2
+        })
+    }
+
+    onKeepActivePrev() {
+        this.setState({
+            currentSlide: 0
         })
     }
 
@@ -110,11 +126,13 @@ class Container extends React.Component {
             <div className="main-container">
                 {
                     this.state.currentSlide === 0 &&
-                    <Intro onIntroNext={this.onIntroNext}/>
+                    <Intro onIntroNext={this.onIntroNext}
+                           onIntroPrev={this.onIntroPrev}/>
                 }
                 {
                     this.state.currentSlide === 1 &&
-                    <KeepActive onKeepActiveNext={this.onKeepActiveNext}/>
+                    <KeepActive onKeepActiveNext={this.onKeepActiveNext}
+                                onKeepActivePrev={this.onKeepActivePrev}/>
                 }
                 {
                     this.state.currentSlide === 2 &&
