@@ -34,6 +34,7 @@ class Container extends React.Component {
 
         this.onIntroPrev = this.onIntroPrev.bind(this);
         this.onKeepActivePrev = this.onKeepActivePrev.bind(this);
+        this.onTakeABreakPrev = this.onTakeABreakPrev.bind(this);
     }
 
     onIntroNext() {
@@ -47,7 +48,6 @@ class Container extends React.Component {
             currentSlide: 11
         })
     }
-
 
     onKeepActiveNext() {
         this.setState({
@@ -64,6 +64,12 @@ class Container extends React.Component {
     onTakeABreakNext() {
         this.setState({
             currentSlide: 3
+        })
+    }
+
+    onTakeABreakPrev() {
+        this.setState({
+            currentSlide: 1
         })
     }
 
@@ -136,7 +142,8 @@ class Container extends React.Component {
                 }
                 {
                     this.state.currentSlide === 2 &&
-                    <TakeABreak onTakeABreakNext={this.onTakeABreakNext} />
+                    <TakeABreak onTakeABreakNext={this.onTakeABreakNext}
+                                onTakeABreakPrev={this.onTakeABreakPrev}/>
                 }
                 {
                     this.state.currentSlide === 3 &&
