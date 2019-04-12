@@ -10,7 +10,8 @@ class AskForHelp extends Component {
                 <p className="bold-text">Ask for Help</p>
                 <p className="content-text">Asking for help is a sign of strength, and can lead to the right support
                     for you, whatever you're going through</p>
-                <button className="previous-button">&#8249;</button>
+                <button className="previous-button"
+                        onClick={this.props.onAskForHelpPrev}>&#8249;</button>
                 <button onClick={this.props.onAskForHelpNext}
                         className="next-button">&#8250;</button>
             </div>
