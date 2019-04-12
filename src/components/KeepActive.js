@@ -6,7 +6,8 @@ class KeepActive extends Component {
         return (
             <div className="keepactive-container">
                 <img src={keepActive}
-                     className="main-image"/>
+                     className="main-image"
+                     alt="Keep Active"/>
                 <p className="bold-text">Look After Yourself</p>
                 <p className="content-text">Find a physical activity you enjoy and make it part of your life, you
                     will feel better and boost your self-esteem</p>

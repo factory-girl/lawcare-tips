@@ -6,7 +6,8 @@ class TakeABreak extends Component {
         return (
             <div className="take-a-break-container">
                 <img src={takeABreak}
-                     className="main-image"/>
+                     className="main-image"
+                     alt="Take a Break"/>
                 <p className="bold-text">Take a Break</p>
                 <p className="content-text">Use your lunchbreak to get away from your desk. Step outside for just a few
                     minutes, it can re-energise you</p>

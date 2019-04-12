@@ -6,7 +6,8 @@ class DrinkInModeration extends Component {
         return (
             <div className="drink-in-moderation-container">
                 <img src={drinkInModeration}
-                     className="main-image"/>
+                     className="main-image"
+                     alt="Drink in Moderation"/>
                 <p className="bold-text">Drink In Moderation</p>
                 <p className="content-text">Stay within the recommended alcohol limits: heavy drinking affects
                     brain function and can cause disease</p>

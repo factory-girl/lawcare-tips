@@ -6,7 +6,8 @@ class Contact extends Component {
         return (
             <div className="contact-container">
                 <img src={phone}
-                     className="main-image"/>
+                     className="main-image"
+                     alt="phone"/>
                 <p className="content-text">Call our free, independent, confidential Helpline on
                     <span className="red-text"> 0800 279 6888</span></p>
                 <p className="content-text">365 days a year </p>

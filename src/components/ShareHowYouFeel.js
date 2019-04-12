@@ -6,7 +6,8 @@ class ShareHowYouFeel extends Component {
         return (
             <div className="share-how-you-feel-container">
                 <img src={shareHowYouFeel}
-                     className="main-image"/>
+                     className="main-image"
+                     alt="Share How You Feel"/>
                 <p className="bold-text">Share How You Feel</p>
                 <p className="content-text">Talk about your feelings, it can help you cope with problems and feel
                     listened to</p>

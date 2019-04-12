@@ -6,7 +6,8 @@ class KeepInTouch extends Component {
         return (
             <div className="keep-in-touch-container">
                 <img src={keepInTouch}
-                     className="main-image"/>
+                     className="main-image"
+                     alt="Keep in Touch"/>
                 <p className="bold-text">Keep in Touch</p>
                 <p className="content-text">Maintain good relationships with friends, family and your wider
                     community: strong connections can help you to feel happier</p>

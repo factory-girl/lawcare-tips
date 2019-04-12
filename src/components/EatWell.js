@@ -6,7 +6,8 @@ class EatWell extends Component {
         return (
             <div className="eat-well-container">
                 <img src={eatWell}
-                     className="main-image"/>
+                     className="main-image"
+                     alt="Eat Well"/>
                 <p className="bold-text">Eat Well</p>
                 <p className="content-text">A balanced diet rich in nutrients is good for both your mental and
                     physical health</p>

@@ -6,7 +6,8 @@ class SleepIsImportant extends Component {
         return (
             <div className="sleep-is-important-container">
                 <img src={sleepIsImportant}
-                     className="main-image"/>
+                     className="main-image"
+                     alt="Sleep is Important"/>
                 <p className="bold-text">Sleep is Important</p>
                 <p className="content-text">Sleeping well can improve concentration and refresh you</p>
                 <button className="previous-button"

@@ -6,7 +6,8 @@ class BeMindful extends Component {
         return (
             <div className="be-mindful-container">
                 <img src={beMindful}
-                     className="main-image"/>
+                     className="main-image"
+                     alt="Be Mindful"/>
                 <p className="bold-text">Be Mindful</p>
                 <p className="content-text">Mindfulness - positive emotions and paying attention to the present -
                     can help you enjoy life more</p>

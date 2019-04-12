@@ -6,7 +6,8 @@ class Intro extends Component {
         return (
             <div className="intro-container">
                 <img src={lawcareLogo}
-                    className="logo"/>
+                    className="logo"
+                     alt="LawCare"/>
                 <p className="bold-text">Look After Yourself</p>
                 <p className="content-text">Top 10 Tips for Good Mental Health and Wellbeing</p>
                 <button className="previous-button"
