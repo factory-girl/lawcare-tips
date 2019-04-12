@@ -35,6 +35,7 @@ class Container extends React.Component {
         this.onIntroPrev = this.onIntroPrev.bind(this);
         this.onKeepActivePrev = this.onKeepActivePrev.bind(this);
         this.onTakeABreakPrev = this.onTakeABreakPrev.bind(this);
+        this.onSleepIsImportantPrev = this.onSleepIsImportantPrev.bind(this);
     }
 
     onIntroNext() {
@@ -76,6 +77,12 @@ class Container extends React.Component {
     onSleepIsImportantNext() {
         this.setState({
             currentSlide: 4
+        })
+    }
+
+    onSleepIsImportantPrev() {
+        this.setState({
+            currentSlide: 2
         })
     }
 
@@ -147,7 +154,8 @@ class Container extends React.Component {
                 }
                 {
                     this.state.currentSlide === 3 &&
-                    <SleepIsImportant onSleepIsImportantNext={this.onSleepIsImportantNext} />
+                    <SleepIsImportant onSleepIsImportantNext={this.onSleepIsImportantNext}
+                                      onSleepIsImportantPrev={this.onSleepIsImportantPrev}/>
                 }
                 {
                     this.state.currentSlide === 4 &&
